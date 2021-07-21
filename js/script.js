@@ -32,6 +32,16 @@
 
         radio1.addEventListener('click', validate);
         radio2.addEventListener('click', validate);
+        // FIN FORMULARIO EFECTO PARA EL BOTON SUBMIT
+
+        // INICIO  MODO OSCURO
+        const imgLogoPrincipal = document.getElementById('logo-cambiante');
+        const imgLogoSecundario = document.getElementById('img-logo-secundario');
+        function modoOscuro(){
+            document.body.classList.toggle('dark');
+        }
+        imgLogoPrincipal.addEventListener('click', modoOscuro);
+        imgLogoSecundario.addEventListener('click', modoOscuro);
     });
 })();
 
