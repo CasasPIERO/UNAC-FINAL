@@ -8,6 +8,12 @@ html{
     margin: 0;
     padding: 0;
 }
+
+::selection{
+    background-color: #e90000;
+    color: #fff;
+}
+
 body{
     font-family: 'Montserrat', sans-serif;
     padding-top: 120px;
@@ -142,10 +148,18 @@ body.dark .header{
 }
 .colegios-lista-sedes li{
     line-height: 1.7;
+    list-style: none;
+}
+.colegios-lista-sedes li::before{
+    color: #e54a4f;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0da';
+    font-weight: 900;
 }
 .colegios-lista-sedes li a{
     color: #e54a4f;
     text-decoration: none;
+    padding-left: 5px;
 }
 .sedes-extras{
     width: 100%;
@@ -168,10 +182,18 @@ body.dark .header{
 }
 .academias .sedes-extras-lista li, .ceba .sedes-extras-lista li{
     line-height: 1.7;
+    list-style: none;
+}
+.academias .sedes-extras-lista li::before, .ceba .sedes-extras-lista li::before{
+    color: #e54a4f;
+    font-family: 'Font Awesome 5 Free';
+    content: '\f0da';
+    font-weight: 900;
 }
 .academias .sedes-extras-lista li a, .ceba .sedes-extras-lista li a{
     color: #e54a4f;
     text-decoration: none;
+    padding-left: 5px;
 }
 
 .redes{
@@ -232,6 +254,7 @@ body.dark .redes3{
 .redes3 p{
     font-weight: bold;
     font-size: 18px;
+    margin-bottom: 15px;
 }
 .redes3 a{
     display: block;
@@ -273,6 +296,9 @@ body.dark .footer{
 .footer1 div ul{
     padding-left: 2rem;
     margin-bottom: 1rem;
+}
+.footer1 div ul li{
+    line-height: 1.5;
 }
 .footer2{
     max-width: 1300px;
@@ -360,10 +386,10 @@ body.dark .footer{
         color: #fff;
         background-color: #0e60b24b;
     }
-    .navegacion li:first-child{
+    .navegacion li:last-child{
         background-color: rgba(39, 80, 155, 1);
     }
-    body.dark .navegacion li:first-child{
+    body.dark .navegacion li:last-child{
         background-color: #0e60b24b;
     }
     .navegacion li:not(:last-child){
